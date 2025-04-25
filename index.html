@@ -17,22 +17,39 @@
       line-height: 1.6;
     }
 
+    /* Disclaimer wie Card stylen */
+    .disclaimer {
+      background-color: #1f1f1f;
+      color: #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,191,255,0.3);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 1140px;
+    }
+    .disclaimer p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
     /* Header mit Hintergrundbild */
     header {
-      background: url("https://github.com/Benutzername/RepoName/raw/main/assets/zukunft-mit-ki-und-erneuerbaren-energien.jpg") no-repeat center center;
+      background: url("file:///C:/Users/weissgerberl/Desktop/KI%20Website/das%20bild%20soll%20l%C3%A4nglicher%20sein%20und%20die%20zukunft%20mit%20ki%20und%20erneuerbaren%20energien%20darstellen,%20ideale%20gr%C3%B6%C3%9Fe_%20.jpg")
+                  no-repeat left center;
       background-size: cover;
-      height: 400px; /* Ideale Höhe für das längliche Bild */
+      height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      text-align: center;
     }
-
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      color: #00bfff;
       margin: 0;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      background: rgba(30,30,30,0.6);
+      padding: 10px 20px;
+      border-radius: 8px;
     }
 
     /* Nav + Suche */
@@ -42,10 +59,8 @@
       align-items: center;
       gap: 30px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      padding: 20px 0;
     }
-
-    /* Burger-Button (mobil versteckt) */
     .burger {
       display: none;
       flex-direction: column;
@@ -63,7 +78,6 @@
       background-color: #fff;
       transition: all 0.3s;
     }
-
     nav ul {
       list-style: none;
       padding: 0;
@@ -71,21 +85,20 @@
       display: inline-flex;
       gap: 15px;
     }
-
+    nav ul li.nav-tipps {
+      margin-left: 100px;
+    }
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
-
     nav a:hover {
       color: #00bfff;
     }
-
     .search-container {
       text-align: left;
     }
-
     #search {
       width: 100%;
       max-width: 300px;
@@ -103,6 +116,8 @@
     /* Karten-Layout */
     .container {
       padding: 20px;
+      max-width: 1140px;
+      margin: 0 auto;
     }
     .card {
       background-color: #1f1f1f;
@@ -112,38 +127,32 @@
       box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
       color: #fff;
     }
-
     .card-header {
       display: flex;
       align-items: center;
       gap: 15px;
       margin-bottom: 15px;
     }
-
     .card-header img {
       width: 40px;
       height: auto;
       object-fit: contain;
       border-radius: 5px;
     }
-
     .card-header h2 {
       color: #00bfff;
       font-size: 1.5rem;
       margin: 0;
     }
-
     .features {
       list-style: disc inside;
       color: #ccc;
       margin: 0;
       padding-left: 20px;
     }
-
     .features li {
       margin: 5px 0;
     }
-
     .card a {
       margin-top: 15px;
       display: inline-block;
@@ -151,7 +160,6 @@
       text-decoration: none;
       font-weight: bold;
     }
-
     .card a:hover {
       color: #fff;
     }
@@ -162,13 +170,14 @@
       border-radius: 10px;
       padding: 20px;
       margin: 40px 20px;
+      max-width: 1140px;
+      margin-left: auto;
+      margin-right: auto;
     }
-
     #tipps h2 {
       color: #00bfff;
       margin-top: 0;
     }
-
     #tipps ul {
       list-style: disc inside;
       color: #ccc;
@@ -181,12 +190,10 @@
       background-color: #1e1e1e;
       margin-top: 40px;
     }
-
     footer p {
       color: #bbb;
       margin: 0 0 10px;
     }
-
     .social-media-box {
       background-color: #2e2e2e;
       padding: 15px;
@@ -194,25 +201,21 @@
       display: inline-block;
       text-align: center;
     }
-
     .social-media-box p {
       color: #fff;
       font-weight: bold;
       margin: 0 0 10px;
     }
-
     .social-media {
       display: flex;
       justify-content: center;
       gap: 20px;
     }
-
     .social-icon {
       font-size: 30px;
       color: #00bfff;
       transition: transform 0.3s ease;
     }
-
     .social-icon:hover {
       transform: scale(1.1);
       color: #fff;
@@ -220,12 +223,9 @@
 
     /* ----- MOBILE-FIRST MEDIA QUERIES ----- */
     @media (max-width: 768px) {
-      /* Schriftgrößen anpassen */
       header h1 { font-size: 2rem; }
       .card-header h2 { font-size: 1.3rem; }
       .features li { font-size: 0.9rem; }
-
-      /* Burger einblenden, Nav verstecken */
       .burger { display: flex; }
       nav ul { 
         display: none;
@@ -234,8 +234,6 @@
         margin-top: 10px;
       }
       nav ul.open { display: flex; }
-
-      /* Nav + Suchleiste untereinander, linksbündig */
       .nav-search {
         flex-direction: column;
         align-items: flex-start;
@@ -256,7 +254,6 @@
   </div>
 
   <header>
-    <img src="https://github.com/Benutzername/RepoName/raw/main/assets/zukunft-mit-ki-und-erneuerbaren-energien.jpg" alt="Header-Bild" style="width: 100%; height: 100%; object-fit: cover;">
     <h1>Integriere die besten KI-Tools für deinen Arbeitsalltag</h1>
   </header>
 
@@ -265,7 +262,6 @@
     <button class="burger" aria-label="Navigation umschalten" onclick="toggleNav()">
       <div></div><div></div><div></div>
     </button>
-
     <nav>
       <ul id="main-nav">
         <li><a href="#chatgpt">ChatGPT</a></li>
@@ -277,16 +273,122 @@
         <li class="nav-tipps"><a href="#tipps">KI-Tipps</a></li>
       </ul>
     </nav>
-
     <div class="search-container">
       <input type="text" id="search" placeholder="Suche KI-Tool…" oninput="filterCards()">
     </div>
   </div>
 
-  <!-- Die weiteren Karten und Inhalte folgen hier -->
+  <div class="container">
+    <!-- ChatGPT -->
+    <div class="card" id="chatgpt">
+      <div class="card-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/768px-ChatGPT-Logo.svg.png" alt="ChatGPT">
+        <h2>ChatGPT</h2>
+      </div>
+      <ul class="features">
+        <li>Natürliche Sprachkonversation</li>
+        <li>Breites Themenspektrum</li>
+        <li>Personalisierte Antworten</li>
+      </ul>
+      <a href="https://chat.openai.com/">Hier kommst du zur KI</a>
+    </div>
+
+    <!-- Perplexity -->
+    <div class="card" id="perplexity">
+      <div class="card-header">
+        <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/perplexity-color.png" alt="Perplexity">
+        <h2>Perplexity</h2>
+      </div>
+      <ul class="features">
+        <li>Präzise Faktenrecherche</li>
+        <li>Schnelle Antwortfindung</li>
+        <li>Webbasierte Datenquellen</li>
+      </ul>
+      <a href="https://www.perplexity.ai/">Hier kommst du zur KI</a>
+    </div>
+
+    <!-- Gemini -->
+    <div class="card" id="gemini">
+      <div class="card-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1280px-Google_Gemini_logo.svg.png" alt="Gemini">
+        <h2>Gemini</h2>
+      </div>
+      <ul class="features">
+        <li>Multimodale Datenanalyse</li>
+        <li>Text, Bild & Video</li>
+        <li>Flexible Integration</li>
+      </ul>
+      <a href="https://gemini.google.com/app?hl=de">Hier kommst du zur KI</a>
+    </div>
+
+    <!-- NotebookLM -->
+    <div class="card" id="notebooklm">
+      <div class="card-header">
+        <img src="https://static.wikia.nocookie.net/logopedia/images/4/4c/NotebookLM_icon.svg/revision/latest/scale-to-width-down/250?cb=20241119212544" alt="NotebookLM">
+        <h2>NotebookLM</h2>
+      </div>
+      <ul class="features">
+        <li>Datenorganisation & Notizen</li>
+        <li>Multiformat-Ausgabe</li>
+        <li>Podcasts & Zusammenfassungen</li>
+      </ul>
+      <a href="https://notebooklm.google.com/">Hier kommst du zur KI</a>
+    </div>
+
+    <!-- Gamma AI -->
+    <div class="card" id="gamma">
+      <div class="card-header">
+        <img src="https://store-images.s-microsoft.com/image/apps.63360.13800228740496758.3ed8203a-9357-4240-af11-1c4d197a5191.a75be1f2-5bb7-4521-b003-bc0263ab8545?h=210" alt="Gamma AI">
+        <h2>Gamma AI</h2>
+      </div>
+      <ul class="features">
+        <li>Automatisiertes Design</li>
+        <li>Visuelle Präsentationen</li>
+        <li>Kreative Templates</li>
+      </ul>
+      <a href="https://gamma.app/de">Hier kommst du zur KI</a>
+    </div>
+
+    <!-- DeepL Write -->
+    <div class="card" id="deeplwrite">
+      <div class="card-header">
+        <img src="https://cdn.worldvectorlogo.com/logos/deepl-1.svg" alt="DeepL Write">
+        <h2>DeepL Write</h2>
+      </div>
+      <ul class="features">
+        <li>Stil- und Grammatikprüfung</li>
+        <li>Flüssigere Formulierungen</li>
+        <li>Multisprachige Unterstützung</li>
+      </ul>
+      <a href="https://www.deepl.com/write">Hier kommst du zur KI</a>
+    </div>
+  </div>
+
+  <!-- Allgemeine KI-Tipps -->
+  <div id="tipps">
+    <h2>Allgemeine KI-Tipps</h2>
+    <ul>
+      <li>Teste verschiedene Modelle für deinen Bedarf.</li>
+      <li>Gehe verantwortungsvoll mit Daten um.</li>
+      <li>Verwende präzise Prompts.</li>
+      <li>Halte Tools auf aktuellem Stand.</li>
+      <li>Dokumentiere deine Erkenntnisse.</li>
+    </ul>
+  </div>
 
   <footer>
     <p>&copy; 2025 Luca Weißgerber – Ich empfehle dir, die vorgestellten KI-Systeme auszuprobieren und ihre Potenziale zu nutzen.</p>
+    <div class="social-media-box">
+      <p>Folge mir auf:</p>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/luca-wei%C3%9Fgerber-93ab39244/" target="_blank">
+          <i class="fab fa-linkedin social-icon"></i>
+        </a>
+        <a href="https://www.instagram.com/luca.we5" target="_blank">
+          <i class="fab fa-instagram social-icon"></i>
+        </a>
+      </div>
+    </div>
   </footer>
 
   <script>
@@ -298,13 +400,10 @@
         card.style.display = text.includes(query) ? '' : 'none';
       });
     }
-
     // Burger-Menu Toggle
     function toggleNav() {
       document.getElementById('main-nav').classList.toggle('open');
     }
   </script>
-
 </body>
 </html>
-
